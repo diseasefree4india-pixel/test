@@ -1,68 +1,607 @@
-<!-- HERO CHANGE (सबसे important) -->
-<h1>
-300+ Sugar Se Normal – 
-<span>Real Patients Ka Proven Ayurvedic Solution</span>
-</h1>
 
-<p class="hero-sub">
-5000+ Patients Benefited • Doctor Guided Treatment • Safe Ayurvedic Formula
-</p>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVDIC HERBAL – Diabetes Control Ayurvedic Treatment</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--green:#0f766e;
+--green-dark:#064e3b;
+--green-mid:#065f46;
+--green-light:#ecfdf5;
+--gold:#f59e0b;
+--white:#ffffff;
+--gray:#f8fafc;
+--text:#1e293b;
+--text-muted:#64748b;
+}
+body{font-family:'Poppins',Arial,sans-serif;background:#f0fdf4;color:var(--text);overflow-x:hidden}
 
-<!-- FREE OFFER (NEW ADD 🔥) -->
-<div style="background:#fff3cd;padding:12px 18px;border-radius:10px;margin:15px auto;max-width:420px;font-weight:600;color:#92400e;">
-🎁 Free Diabetes Diet Plan + Consultation WhatsApp Par Milega
+/* TOPBAR */
+.topbar{background:linear-gradient(135deg,var(--green-dark),var(--green));color:#fff;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:500}
+.topbar-left{display:flex;align-items:center;gap:20px}
+.topbar span{display:flex;align-items:center;gap:6px}
+.pulse-dot{width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+
+/* NAVBAR */
+.navbar{background:rgba(255,255,255,.97);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:14px 30px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom:2px solid var(--green-light)}
+.logo-box{display:flex;align-items:center;gap:12px}
+.logo{height:48px;border-radius:8px}
+.brand-name{font-size:13px;font-weight:700;color:var(--green-dark);line-height:1.3;max-width:180px}
+.brand-tagline{font-size:10px;color:var(--green);font-weight:500;letter-spacing:.5px;text-transform:uppercase}
+.nav-links{display:flex;gap:5px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--text-muted);font-weight:500;font-size:14px;padding:8px 14px;border-radius:8px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--green);background:var(--green-light)}
+.nav-cta{background:var(--green)!important;color:#fff!important;border-radius:30px!important;padding:9px 18px!important}
+.nav-cta:hover{background:var(--green-dark)!important;transform:scale(1.03)}
+.menu-toggle{display:none;font-size:26px;cursor:pointer;color:var(--green-dark)}
+
+/* HERO */
+.hero{padding:70px 20px 60px;text-align:center;background:linear-gradient(160deg,#ecfdf5 0%,#f0fdf4 50%,#dcfce7 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50px;right:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(5,150,105,.12),transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(245,158,11,.1),transparent 70%);border-radius:50%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--green-light);color:var(--green);border:1px solid #a7f3d0;border-radius:30px;padding:7px 16px;font-size:13px;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(24px,5vw,42px);color:var(--green-dark);line-height:1.35;font-weight:800;max-width:700px;margin:0 auto 16px}
+.hero h1 span{color:var(--green);background:linear-gradient(135deg,#059669,#0f766e);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{color:var(--green-mid);font-size:16px;margin-bottom:30px;max-width:500px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:40px}
+.btn-primary{background:linear-gradient(135deg,#059669,#0f766e);color:#fff;padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:.3s;box-shadow:0 8px 25px rgba(5,150,105,.35)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(5,150,105,.45)}
+.btn-secondary{background:#fff;color:var(--green);padding:15px 30px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--green);transition:.3s}
+.btn-secondary:hover{background:var(--green-light);transform:translateY(-3px)}
+.trust-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.trust-item{background:#fff;border:1px solid #d1fae5;border-radius:50px;padding:10px 18px;font-size:13px;font-weight:600;color:var(--green-mid);display:flex;align-items:center;gap:7px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.trust-icon{font-size:16px}
+
+/* STATS */
+.stats{background:linear-gradient(135deg,var(--green-dark),var(--green));padding:50px 20px;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.stat-card{color:#fff}
+.stat-num{font-size:42px;font-weight:800;color:#4ade80;line-height:1}
+.stat-label{font-size:13px;opacity:.85;margin-top:6px;font-weight:500}
+
+/* PROBLEMS */
+.problems{padding:70px 20px;background:#fff}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:clamp(22px,4vw,32px);color:var(--green-dark);font-weight:800;margin-bottom:10px}
+.section-title p{color:var(--text-muted);font-size:15px}
+.problems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;max-width:900px;margin:0 auto}
+.problem-card{background:#fff5f5;border:1px solid #fecaca;border-radius:16px;padding:24px;display:flex;align-items:flex-start;gap:14px;transition:.3s}
+.problem-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.prob-icon{font-size:28px;flex-shrink:0}
+.prob-text{font-weight:600;color:#dc2626;font-size:15px}
+.prob-sub{font-size:13px;color:#64748b;margin-top:4px}
+
+/* SOLUTION BANNER */
+.solution-banner{background:linear-gradient(135deg,var(--green-dark),#065f46);color:#fff;padding:50px 20px;text-align:center}
+.solution-banner h2{font-size:clamp(22px,4vw,34px);font-weight:800;margin-bottom:16px}
+.solution-banner p{opacity:.9;font-size:15px;max-width:600px;margin:0 auto 30px}
+.solution-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-top:30px}
+.step-pill{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:10px 20px;font-size:14px;font-weight:600;backdrop-filter:blur(5px)}
+
+/* DOCTOR */
+.doctor{padding:70px 20px;background:var(--green-light)}
+.doctor-card{background:#fff;border-radius:24px;padding:40px;max-width:700px;margin:0 auto;display:flex;gap:30px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,.1);flex-wrap:wrap}
+.doctor-avatar{width:100px;height:100px;background:linear-gradient(135deg,var(--green),var(--green-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:40px;flex-shrink:0}
+.doctor-info h3{font-size:22px;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+.doctor-info p{color:var(--text-muted);font-size:14px;line-height:1.7}
+.exp-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.exp-badge{background:var(--green-light);color:var(--green);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600;border:1px solid #a7f3d0}
+
+/* VIDEOS */
+.videos-section{padding:70px 20px;background:#fff}
+.videos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.video-wrap{border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.12);transition:.3s;position:relative}
+.video-wrap:hover{transform:translateY(-5px);box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.video-wrap iframe{width:100%;height:210px;border:none;display:block}
+.video-label{background:var(--green-dark);color:#fff;padding:10px 14px;font-size:13px;font-weight:600;text-align:center}
+
+/* PRODUCTS */
+.products-section{padding:70px 20px;background:linear-gradient(180deg,#f0fdf4,#ecfdf5)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.product-card{background:#fff;border-radius:20px;padding:24px 16px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s;border:1px solid #d1fae5;cursor:pointer}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 15px 40px rgba(0,0,0,.15);border-color:var(--green)}
+.product-card img{width:100%;height:160px;object-fit:contain;margin-bottom:14px}
+.product-name{font-size:16px;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+.product-badge{display:inline-block;background:var(--green-light);color:var(--green);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600}
+
+/* TESTIMONIALS */
+.testimonials{padding:70px 20px;background:#fff}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.testi-card{background:var(--green-light);border-radius:16px;padding:24px;border:1px solid #a7f3d0;position:relative}
+.testi-quote{font-size:40px;color:var(--green);font-weight:800;line-height:.8;margin-bottom:10px}
+.testi-text{color:var(--text);font-size:14px;line-height:1.7;margin-bottom:16px}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-avatar{width:40px;height:40px;background:var(--green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex-shrink:0}
+.testi-name{font-weight:700;font-size:14px;color:var(--green-dark)}
+.testi-loc{font-size:12px;color:var(--text-muted)}
+.stars{color:var(--gold);font-size:14px;margin-bottom:4px}
+
+/* WHY US */
+.why-us{padding:70px 20px;background:var(--green-light)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.why-card{background:#fff;border-radius:16px;padding:28px 20px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.07);transition:.3s}
+.why-card:hover{transform:translateY(-5px)}
+.why-icon{font-size:42px;margin-bottom:14px;display:block}
+.why-title{font-weight:700;color:var(--green-dark);margin-bottom:8px;font-size:16px}
+.why-text{color:var(--text-muted);font-size:13px;line-height:1.6}
+
+/* CTA */
+.cta-section{padding:80px 20px;background:linear-gradient(135deg,var(--green-dark),var(--green));text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.08),transparent 60%);border-radius:50%}
+.cta-section h2{font-size:clamp(24px,5vw,38px);color:#fff;font-weight:800;margin-bottom:14px}
+.cta-section p{color:rgba(255,255,255,.85);font-size:16px;margin-bottom:35px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn-white{background:#fff;color:var(--green);padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:.3s;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.3)}
+.btn-outline-white{background:transparent;color:#fff;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.6);transition:.3s}
+.btn-outline-white:hover{background:rgba(255,255,255,.15);transform:translateY(-3px)}
+
+/* FAQ */
+.faq{padding:70px 20px;background:#fff}
+.faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{border:1px solid #e2e8f0;border-radius:14px;overflow:hidden}
+.faq-q{background:var(--green-light);padding:18px 20px;font-weight:600;color:var(--green-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:.3s;color:var(--text-muted);font-size:14px;line-height:1.7}
+.faq-item.open .faq-a{max-height:200px;padding:16px 20px}
+.faq-arrow{transition:.3s;font-size:18px}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+
+/* FOOTER */
+.footer{background:#0a1628;color:#94a3b8;padding:50px 20px 30px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1000px;margin:0 auto 30px}
+.footer-brand h3{color:#fff;font-size:18px;font-weight:700;margin-bottom:10px}
+.footer-brand p{font-size:13px;line-height:1.7}
+.footer-links h4{color:#fff;font-weight:600;margin-bottom:14px;font-size:14px}
+.footer-links a{display:block;color:#94a3b8;text-decoration:none;margin-bottom:8px;font-size:13px;transition:.2s}
+.footer-links a:hover{color:#4ade80}
+.footer-contact p{font-size:13px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.footer-bottom{text-align:center;border-top:1px solid #1e293b;padding-top:20px;font-size:12px}
+
+/* FLOAT WHATSAPP */
+.float-wa{position:fixed;bottom:80px;right:20px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;z-index:999;box-shadow:0 5px 20px rgba(37,211,102,.5);animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* STICKY BOTTOM */
+.bottom-bar{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#25d366,#128c7e);text-align:center;padding:16px;font-weight:700;z-index:998;font-size:15px;box-shadow:0 -3px 20px rgba(0,0,0,.2)}
+.bottom-bar a{color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px}
+
+/* MOBILE */
+@media(max-width:768px){
+.menu-toggle{display:block}
+.topbar{flex-direction:column;gap:5px;text-align:center}
+.nav-links{
+position:fixed;
+top:0;
+right:-100%;
+width:260px;
+height:100vh;
+background:#fff;
+flex-direction:column;
+padding:70px 20px 20px;
+box-shadow:-5px 0 30px rgba(0,0,0,.15);
+transition:.3s;
+gap:5px;
+z-index:999
+}
+.nav-links.active{right:0}
+.nav-links a{border-radius:10px;padding:13px 16px;border-bottom:1px solid var(--green-light)}
+.doctor-card{flex-direction:column;text-align:center}
+.hero{padding:50px 15px 40px}
+}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr 1fr}
+.products-grid{grid-template-columns:1fr 1fr}
+.hero h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+<div class="topbar-left">
+<span><div class="pulse-dot"></div> Live Support Available</span>
+<span>📞 8434813523</span>
+</div>
+<span>🚚 Free Delivery All Over India</span>
 </div>
 
-<!-- CTA BUTTON IMPROVED -->
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo-box">
+<img src="devdic logo.png" class="logo" alt="Devdic Herbal Logo">
+<div>
+<div class="brand-name">DEVDIC HERBAL OPC PVT. LTD.</div>
+<div class="brand-tagline">Ayurvedic Diabetes Specialist</div>
+</div>
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="nav-links" id="navLinks">
+<a href="index.html" class="active">Home</a>
+<a href="product.html">Products</a>
+<a href="testimonials.html">Results</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="https://wa.me/918434813523" class="nav-cta">💬 Free Consult</a>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-badge">
+<span>🌿</span>
+<span>100% Certified Ayurvedic Formula</span>
+</div>
+<h1>15 Din Mein <span>Diabetes Control</span> Karna Shuru Karein</h1>
+<p class="hero-sub">5000+ Satisfied Patients • No Side Effects • Doctor Guided Treatment</p>
 <div class="hero-btns">
-<a class="btn-primary" href="https://wa.me/918434813523?text=Mujhe%20free%20consultation%20chahiye">
+<a class="btn-primary" href="https://wa.me/918434813523?text=Mujhe%20diabetes%20consultation%20chahiye">
 💬 Free Consultation Abhi Lein
 </a>
 <a class="btn-secondary" href="product.html">
 🛒 Products Dekhen
 </a>
 </div>
-
-<!-- URGENCY ADD 🔥 -->
-<p style="color:#dc2626;font-weight:700;margin-top:15px;">
-⚠ Aaj ke liye limited consultation slots available
-</p>
-
-<!-- ===================== -->
-
-<!-- CTA SECTION IMPROVE -->
-<div class="cta-section">
-<h2>Ab Intezaar Kyon? Aaj Hi Shuru Karein! 🌿</h2>
-
-<p>
-Free consultation lein + apni report share karein aur personalized treatment paayein
-</p>
-
-<!-- OFFER AGAIN -->
-<div style="background:rgba(255,255,255,.15);padding:12px;border-radius:10px;margin:15px auto;max-width:400px;">
-🎁 Free Diet Plan + Doctor Consultation
+<div class="trust-grid">
+<div class="trust-item"><span class="trust-icon">✅</span> 100% Herbal</div>
+<div class="trust-item"><span class="trust-icon">👨‍👩‍👧‍👦</span> 5000+ Patients</div>
+<div class="trust-item"><span class="trust-icon">⚡</span> Fast Results</div>
+<div class="trust-item"><span class="trust-icon">🛡️</span> No Side Effects</div>
+<div class="trust-item"><span class="trust-icon">🏆</span> Certified Formula</div>
+</div>
 </div>
 
+<!-- STATS -->
+<div class="stats">
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-num">5000+</div>
+<div class="stat-label">Satisfied Patients</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">15</div>
+<div class="stat-label">Din Mein Result</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">100%</div>
+<div class="stat-label">Natural Ingredients</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">0</div>
+<div class="stat-label">Side Effects</div>
+</div>
+</div>
+</div>
+
+<!-- PROBLEMS -->
+<div class="problems">
+<div class="section-title">
+<h2>Kya Aap Ye Problems Face Kar Rahe Hain? 🤔</h2>
+<p>Agar haan, toh aap sahi jagah aaye hain</p>
+</div>
+<div class="problems-grid">
+<div class="problem-card">
+<span class="prob-icon">😰</span>
+<div>
+<div class="prob-text">Sugar Control Nahi Hoti</div>
+<div class="prob-sub">Dawai khaate hain par sugar kabhi normal nahi rehti</div>
+</div>
+</div>
+<div class="problem-card">
+<span class="prob-icon">😴</span>
+<div>
+<div class="prob-text">Har Waqt Weakness Rehti Hai</div>
+<div class="prob-sub">Koi kaam karne ka man nahi, thakan mehsoos hoti hai</div>
+</div>
+</div>
+<div class="problem-card">
+<span class="prob-icon">💊</span>
+<div>
+<div class="prob-text">Chemical Medicines Ke Side Effects</div>
+<div class="prob-sub">Allopathy se kidney aur liver par bura asar</div>
+</div>
+</div>
+<div class="problem-card">
+<span class="prob-icon">💸</span>
+<div>
+<div class="prob-text">Mahine Ka Bada Kharcha</div>
+<div class="prob-sub">Har mahine hazaron rupaye dawai par kharch ho jaate hain</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SOLUTION BANNER -->
+<div class="solution-banner">
+<h2>Hamara Ayurvedic Solution – Permanent Relief!</h2>
+<p>5000+ Patients Pehle Se Is Samasyaa Se Mukti Pa Chuke Hain. Ab Aapki Baari Hai!</p>
+<a class="btn-white" href="https://wa.me/918434813523">💬 Ab Shuru Karein</a>
+<div class="solution-steps">
+<div class="step-pill">🌿 Pure Herbs</div>
+<div class="step-pill">👨‍⚕️ Doctor Guided</div>
+<div class="step-pill">📦 Home Delivery</div>
+<div class="step-pill">📞 24/7 Support</div>
+</div>
+</div>
+
+<!-- DOCTOR -->
+<div class="doctor">
+<div class="section-title">
+<h2>👨‍⚕️ Expert Ayurvedic Doctor ki Guidance</h2>
+<p>Aapko personally guide karne wale experienced doctors</p>
+</div>
+<div class="doctor-card">
+<div class="doctor-avatar">👨‍⚕️</div>
+<div class="doctor-info">
+<h3>Dr. Devdic Herbal Team</h3>
+<p>Hamare experienced Ayurvedic doctors har patient ko personally guide karte hain. Aapki problem ko samjhkar ek custom treatment plan banaya jaata hai jo fast aur safe results deta hai.</p>
+<div class="exp-badges">
+<div class="exp-badge">✅ 10+ Saal Experience</div>
+<div class="exp-badge">🌿 Ayurveda Certified</div>
+<div class="exp-badge">📞 Free Consultation</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- VIDEOS -->
+<div class="videos-section">
+<div class="section-title">
+<h2>🎥 Real Patients Ke Actual Results</h2>
+<p>Ye log jhoot nahi bolte – dekhen khud unke munh se</p>
+</div>
+<div class="videos-grid">
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/goA_3s4YYZ8" allowfullscreen></iframe>
+<div class="video-label">⭐ Patient Review 1 – Sugar 400 se 110!</div>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/XO_ofb4noFw" allowfullscreen></iframe>
+<div class="video-label">⭐ Patient Review 2 – 15 Din Mein Farq</div>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/q4hB-L0yRUE" allowfullscreen></iframe>
+<div class="video-label">⭐ Patient Review 3 – Insulin Choot Gayi</div>
+</div>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/AdPOk6dyDEE" allowfullscreen></iframe>
+<div class="video-label">⭐ Patient Review 4 – Poori Family Khush</div>
+</div>
+</div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products-section">
+<div class="section-title">
+<h2>🌿 Hamare Premium Ayurvedic Products</h2>
+<p>Carefully crafted, clinically tested herbal formulas</p>
+</div>
+<div class="products-grid">
+<div class="product-card" onclick="window.location.href='product.html'">
+<img src="db-boost.jpg" alt="DB Boost">
+<div class="product-name">DB BOOST</div>
+<div class="product-badge">Bestseller</div>
+</div>
+<div class="product-card" onclick="window.location.href='product.html'">
+<img src="db-life.jpg" alt="DB Life">
+<div class="product-name">DB LIFE</div>
+<div class="product-badge">Energy Booster</div>
+</div>
+<div class="product-card" onclick="window.location.href='product.html'">
+<img src="dabatas.jpg" alt="Dabatas">
+<div class="product-name">DABATAS</div>
+<div class="product-badge">Power Formula</div>
+</div>
+<div class="product-card" onclick="window.location.href='product.html'">
+<img src="sugar-key.jpg" alt="Sugar Key">
+<div class="product-name">SUGAR KEY</div>
+<div class="product-badge">Fast Acting</div>
+</div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials">
+<div class="section-title">
+<h2>💬 Patients Kya Kehte Hain</h2>
+<p>Real reviews from real people across India</p>
+</div>
+<div class="testi-grid">
+<div class="testi-card">
+<div class="stars">★★★★★</div>
+<div class="testi-quote">"</div>
+<p class="testi-text">Pehle sugar 380 rehti thi, doctors ne insulin shuru karne ko kaha tha. Devdic ka product try kiya aur 3 hafte mein sugar 120 ho gayi! Ab koi dawai nahi.</p>
+<div class="testi-author">
+<div class="testi-avatar">R</div>
+<div>
+<div class="testi-name">Ramesh Kumar</div>
+<div class="testi-loc">📍 Lucknow, UP</div>
+</div>
+</div>
+</div>
+<div class="testi-card">
+<div class="stars">★★★★★</div>
+<div class="testi-quote">"</div>
+<p class="testi-text">8 saal se diabetes thi. Kai doctors se ilaj karwaya lekin koi fayda nahi. Devdic ki 45 din ki course ke baad report normal aa gayi. Bohot khush hoon!</p>
+<div class="testi-author">
+<div class="testi-avatar">S</div>
+<div>
+<div class="testi-name">Sunita Devi</div>
+<div class="testi-loc">📍 Patna, Bihar</div>
+</div>
+</div>
+</div>
+<div class="testi-card">
+<div class="stars">★★★★★</div>
+<div class="testi-quote">"</div>
+<p class="testi-text">Mere papa ko Type 2 diabetes thi aur kaafi weakness rehti thi. Devdic ka product use karke 2 hafte mein energy wapas aayi aur sugar bhi control ho gayi.</p>
+<div class="testi-author">
+<div class="testi-avatar">A</div>
+<div>
+<div class="testi-name">Amit Sharma</div>
+<div class="testi-loc">📍 Delhi</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- WHY US -->
+<div class="why-us">
+<div class="section-title">
+<h2>🏆 Kyun Chunen Devdic Herbal?</h2>
+<p>Hamare paas sirf dawai nahi, ek poora system hai aapke liye</p>
+</div>
+<div class="why-grid">
+<div class="why-card">
+<span class="why-icon">🌿</span>
+<div class="why-title">100% Natural Herbs</div>
+<p class="why-text">Himalaya ke rare herbs se bani dawai, koi artificial ingredient nahi</p>
+</div>
+<div class="why-card">
+<span class="why-icon">⚡</span>
+<div class="why-title">15 Din Mein Result</div>
+<p class="why-text">Fast acting formula jo sugar level control karna shuru karta hai</p>
+</div>
+<div class="why-card">
+<span class="why-icon">👨‍⚕️</span>
+<div class="why-title">Doctor Support</div>
+<p class="why-text">Poore treatment mein doctor ki personal guidance milti hai free</p>
+</div>
+<div class="why-card">
+<span class="why-icon">🛡️</span>
+<div class="why-title">Zero Side Effects</div>
+<p class="why-text">Pure herbal formula – liver, kidney, heart par koi bura asar nahi</p>
+</div>
+<div class="why-card">
+<span class="why-icon">📦</span>
+<div class="why-title">Free Home Delivery</div>
+<p class="why-text">Pure India mein free delivery – ghar baithe order karein</p>
+</div>
+<div class="why-card">
+<span class="why-icon">📞</span>
+<div class="why-title">24/7 Support</div>
+<p class="why-text">Koi bhi sawaal ho, hum hamesha aapke liye available hain</p>
+</div>
+</div>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+<div class="section-title">
+<h2>❓ Aksar Pooche Jaane Wale Sawaal</h2>
+<p>Aapke mann mein jo bhi sawaal hain, yahan jawab hain</p>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+Kya yeh product safe hai? Side effects toh nahi honge? <span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Bilkul safe hai. Hamare products 100% natural herbs se bane hain aur kisi certified Ayurvedic doctor ki guidance mein taiyar kiye jaate hain. Koi chemical nahi, koi side effect nahi.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+Kitne time mein result milega? <span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Zyaadatar patients 15 din ke andar farq mehsoos karte hain. Full control ke liye 45-90 din ka course recommended hai. Har patient ka body different hota hai.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+Kya allopathy ki dawai ke saath le sakte hain? <span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Haan, le sakte hain. Hamare doctor aapko guide karenge ki kaise dono ka combination lena hai. Dheere dheere allopathy band bhi ho sakti hai jab sugar control ho jaaye.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)">
+Delivery kitne din mein milegi? Kahan tak deliver karte hain? <span class="faq-arrow">▼</span>
+</div>
+<div class="faq-a">Pure India mein deliver karte hain. Delivery 3-7 working days mein ho jaati hai. Delivery charge free hai. Order ke baad tracking ID milti hai.</div>
+</div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+<h2>Ab Intezaar Kyon? Aaj Hi Shuru Karein! 🌿</h2>
+<p>Free consultation lein, apni diabetes report share karein, aur personalized treatment plan paayein</p>
 <div class="cta-btns">
-<a class="btn-white" href="https://wa.me/918434813523">
+<a class="btn-white" href="https://wa.me/918434813523?text=Mujhe%20free%20consultation%20chahiye">
 💬 WhatsApp Par Free Consultation
 </a>
 <a class="btn-outline-white" href="product.html">
 🛒 Products Dekhein
 </a>
 </div>
-
-<!-- URGENCY AGAIN -->
-<p style="margin-top:15px;color:#fecaca;font-weight:600;">
-⏳ Limited Slots – Jaldi Book Karein
-</p>
 </div>
 
-<!-- ===================== -->
+<!-- FOOTER -->
+<div class="footer">
+<div class="footer-grid">
+<div class="footer-brand">
+<h3>🌿 DEVDIC HERBAL</h3>
+<p>India ka trusted ayurvedic brand jo diabetes ko natural tarike se control karne mein help karta hai. 5000+ khush patients hamare kaam ki tasveer hain.</p>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<a href="index.html">🏠 Home</a>
+<a href="product.html">🌿 Products</a>
+<a href="testimonials.html">⭐ Results</a>
+<a href="about.html">ℹ️ About Us</a>
+<a href="contact.html">📞 Contact</a>
+</div>
+<div class="footer-contact">
+<h4 style="color:#fff;margin-bottom:14px;font-size:14px">Contact Us</h4>
+<p>📞 8434813523</p>
+<p>💬 WhatsApp Available</p>
+<p>📦 Free Delivery PAN India</p>
+<p>⏰ Mon–Sat: 9AM – 7PM</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 DEVDIC HERBAL OPC PRIVATE LIMITED. All Rights Reserved.</p>
+<p style="margin-top:8px">Made with ❤️ for Healthier India</p>
+</div>
+</div>
 
-<!-- AUTO WHATSAPP POPUP 🔥 -->
+<!-- FLOAT WHATSAPP -->
+<a class="float-wa" href="https://wa.me/918434813523" title="WhatsApp">💬</a>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="bottom-bar">
+<a href="https://wa.me/918434813523?text=Mujhe%20free%20diabetes%20consultation%20chahiye">
+💬 WhatsApp Par Free Consultation Lein – Abhi Click Karein!
+</a>
+</div>
+
 <script>
-setTimeout(function(){
-window.open("https://wa.me/918434813523","_blank");
-},15000);
+function toggleMenu(){
+const nav = document.getElementById("navLinks");
+nav.classList.toggle("active");
+}
+
+function toggleFaq(el){
+const item = el.parentElement;
+item.classList.toggle("open");
+}
+
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll("#navLinks a").forEach(link => {
+if(link.getAttribute("href") === currentPage) link.classList.add("active");
+});
+
+document.addEventListener("click", e => {
+const nav = document.getElementById("navLinks");
+const toggle = document.querySelector(".menu-toggle");
+if(nav.classList.contains("active") && !nav.contains(e.target) && !toggle.contains(e.target)){
+nav.classList.remove("active");
+}
+});
 </script>
+</body>
+</html>
