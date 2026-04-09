@@ -4,181 +4,202 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DEVDIC HERBAL</title>
+<title>DEVDIC HERBAL – Diabetes Control Ayurvedic Treatment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#111;
+}
 
-body{background:#f9fafb;color:#111}
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 20px;
+}
 
 /* NAV */
 .nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 40px;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-z-index:100;
+padding:20px 0;
 }
-
-.logo{font-weight:bold;font-size:20px;color:#065f46}
+.logo{
+font-weight:700;
+font-size:18px;
+}
+.nav-btn{
+background:#111;
+color:#fff;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+}
 
 /* HERO */
 .hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 40px;
-background:linear-gradient(135deg,#ecfdf5,#d1fae5)
+text-align:center;
+padding:80px 0 60px;
 }
-
-.hero-text{
-max-width:500px
-}
-
 .hero h1{
-font-size:42px;
+font-size:40px;
+line-height:1.3;
 margin-bottom:20px;
-color:#064e3b;
 }
-
 .hero p{
 font-size:18px;
+color:#555;
 margin-bottom:25px;
-color:#065f46;
 }
 
 /* BUTTON */
 .btn{
-background:#10b981;
-color:white;
-padding:14px 26px;
-border-radius:50px;
+background:#111;
+color:#fff;
+padding:14px 28px;
+border-radius:8px;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
-display:inline-block;
-box-shadow:0 10px 25px rgba(16,185,129,.3)
 }
-.btn:hover{transform:translateY(-3px)}
 
-/* IMAGE */
-.hero img{
-width:420px;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,.1)
+/* TRUST */
+.trust{
+margin-top:15px;
+font-size:14px;
+color:#555;
 }
 
 /* SECTION */
 .section{
-padding:80px 40px;
+padding:70px 0;
 text-align:center;
 }
-
 .section h2{
 font-size:28px;
 margin-bottom:30px;
 }
 
-/* CARDS */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 }
 
+/* CARD */
 .card{
-background:white;
 padding:25px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,.1)
+border:1px solid #eee;
+border-radius:10px;
 }
 
-/* TESTIMONIAL */
-.testimonial{
-max-width:600px;
-margin:20px auto;
-background:#ecfdf5;
-padding:25px;
-border-radius:15px;
-font-style:italic;
+/* VIDEO */
+iframe{
+width:100%;
+height:200px;
+border:none;
+border-radius:8px;
 }
 
-/* CTA */
-.cta{
-background:#065f46;
-color:white;
-padding:80px 40px;
+/* CTA BLOCK */
+.cta-block{
+background:#111;
+color:#fff;
+padding:60px 20px;
 text-align:center;
 }
 
-.cta h2{margin-bottom:20px}
-
-/* WHATSAPP */
+/* FLOAT */
 .whatsapp{
 position:fixed;
-bottom:20px;
+bottom:70px;
 right:20px;
 background:#25D366;
-color:white;
-padding:15px 20px;
+color:#fff;
+padding:14px;
 border-radius:50px;
 text-decoration:none;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-.hero{
-flex-direction:column;
+/* BOTTOM BAR */
+.bottom-bar{
+position:fixed;
+bottom:0;
+width:100%;
+background:#25D366;
 text-align:center;
+padding:14px;
+font-weight:bold;
 }
-.hero img{margin-top:30px;width:100%}
+.bottom-bar a{color:white;text-decoration:none}
+
+/* MOBILE */
+@media(max-width:600px){
+.hero h1{font-size:28px}
 }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <!-- NAV -->
 <div class="nav">
 <div class="logo">DEVDIC HERBAL</div>
-<a class="btn" href="https://wa.me/918434813523">Consult Now</a>
+<a href="https://wa.me/918434813523" class="nav-btn">Consult</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-<div class="hero-text">
-<h1>15 Din Me Diabetes Control Karna Shuru Karein</h1>
-<p>5000+ Patients Benefited • 100% Ayurvedic • No Side Effects</p>
+<h1>300+ Sugar Se Normal Tak – Real Patients Ka Proven Ayurvedic Solution</h1>
+<p>5000+ logon ne benefit liya • Doctor Guided Treatment • No Side Effects</p>
 
 <a href="https://wa.me/918434813523" class="btn">💬 Free Consultation</a>
+
+<div class="trust">
+✔ ISO Certified | ✔ 5000+ Patients | ✔ 4.8⭐ Rating
+</div>
 </div>
 
-<img src="https://images.unsplash.com/photo-1580281657527-47e1a9f9c1d2">
 </div>
 
 <!-- PROBLEM -->
 <div class="section">
+<div class="container">
 <h2>Kya Aap Ye Problems Face Kar Rahe Hain?</h2>
 
 <div class="grid">
 <div class="card">❌ Sugar control nahi ho raha</div>
 <div class="card">❌ Weakness aur thakan</div>
-<div class="card">❌ Medicines ka side effect</div>
+<div class="card">❌ Medicine se side effect</div>
 </div>
 
+</div>
+</div>
+
+<!-- BEFORE AFTER -->
+<div class="section">
+<div class="container">
+<h2>Before / After Result</h2>
+
+<div class="grid">
+<div class="card">Before: 320 Sugar</div>
+<div class="card">After: 110 Normal</div>
+</div>
+
+</div>
 </div>
 
 <!-- VIDEO -->
 <div class="section">
+<div class="container">
 <h2>🎥 Real Patient Results</h2>
 
 <div class="grid">
@@ -187,24 +208,25 @@ text-align:center;
 </div>
 
 </div>
-
-<!-- TESTIMONIAL -->
-<div class="section">
-<h2>💬 Patient Feedback</h2>
-
-<div class="testimonial">
-“Sir mera sugar 300 se normal ho gaya – bahut fayda mila”
-</div>
-
 </div>
 
 <!-- CTA -->
-<div class="cta">
-<h2>Aaj Hi Shuruaat Karein</h2>
+<div class="cta-block">
+<h2>⚠ Limited Consultation Slots Available</h2>
 <a href="https://wa.me/918434813523" class="btn">💬 WhatsApp Karein</a>
 </div>
 
 <a href="https://wa.me/918434813523" class="whatsapp">💬</a>
+
+<div class="bottom-bar">
+<a href="https://wa.me/918434813523">💬 Free Consultation Now</a>
+</div>
+
+<script id="l9j3xp">
+setTimeout(function(){
+window.open("https://wa.me/918434813523","_blank");
+},15000);
+</script>
 
 </body>
 </html>
