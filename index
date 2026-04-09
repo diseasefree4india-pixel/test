@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
+  <title>Disease Free India</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+      text-align: center;
+    }
+    header {
+      background: #28a745;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+    section {
+      padding: 40px;
+    }
+    .btn {
+      background: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome Randhir 🚀</h1>
-  <p>My first GitHub website</p>
+
+<header>
+  Disease Free India 🇮🇳
+</header>
+
+<section>
+  <h1>Welcome to Healthy Life</h1>
+  <p>हम आपको बताते हैं कैसे sugar, BP और diseases को control करें</p>
+  
+  <a class="btn" href="#">Watch Videos</a>
+</section>
+
+<section>
+  <h2>About Us</h2>
+  <p>हम real patients के experience share करते हैं जिससे लोगों को help मिले</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<footer>
+  © 2026 Disease Free India
+</footer>
+
 </body>
 </html>
