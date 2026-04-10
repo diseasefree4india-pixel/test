@@ -6,47 +6,126 @@
 <title>Products – DEVDIC HERBAL</title>
 
 <style>
-body{font-family:Arial;margin:0;background:#f5f5f5;padding-bottom:90px}
-.filter-bar{background:#fff;padding:15px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;position:sticky;top:0;z-index:100;}
-.filter-btn{padding:8px 15px;border-radius:20px;border:1px solid #ccc;cursor:pointer;}
-.filter-btn.active{background:#059669;color:#fff;}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:20px;}
-.product-card{background:#fff;padding:20px;border-radius:10px;text-align:center;}
-.empty-state{display:none;text-align:center;padding:40px;}
-.empty-state.show{display:block;}
-.bottom-bar{position:fixed;bottom:0;left:0;width:100%;background:#25D366;text-align:center;padding:15px;font-weight:bold;}
+body{font-family:Arial;margin:0;background:#f8fffe;padding-bottom:90px}
+
+/* FILTER */
+.filter-bar{
+background:#fff;
+padding:15px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.filter-btn{
+padding:8px 15px;
+border-radius:20px;
+border:1px solid #ccc;
+cursor:pointer;
+}
+.filter-btn.active{
+background:#059669;
+color:#fff;
+}
+
+/* GRID */
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+/* CARD */
+.product-card{
+background:#fff;
+border-radius:12px;
+padding:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* EMPTY */
+.empty-state{
+display:none;
+text-align:center;
+padding:40px;
+}
+.empty-state.show{display:block}
+
+/* BOTTOM */
+.bottom-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#25D366;
+text-align:center;
+padding:15px;
+font-weight:bold;
+color:#fff;
+}
 </style>
 </head>
 
 <body>
 
+<!-- FILTER -->
 <div class="filter-bar">
-<button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
-<button class="filter-btn" onclick="filterProducts('capsule',this)">Capsule</button>
+<button class="filter-btn active" onclick="filterProducts('all',this)">All Products</button>
+<button class="filter-btn" onclick="filterProducts('capsule',this)">Capsules</button>
 <button class="filter-btn" onclick="filterProducts('powder',this)">Powder</button>
 <button class="filter-btn" onclick="filterProducts('syrup',this)">Syrup</button>
-<input type="text" id="searchInput" placeholder="Search product..." oninput="searchProducts()">
+
+<input type="text" id="searchInput" placeholder="Product dhundhen..." oninput="searchProducts()">
 </div>
 
+<!-- PRODUCTS -->
 <div class="products-grid">
 
-<div class="product-card" data-category="capsule" data-name="db boost">DB BOOST</div>
-<div class="product-card" data-category="capsule" data-name="db life">DB LIFE</div>
-<div class="product-card" data-category="capsule" data-name="dabatas">DABATAS</div>
+<div class="product-card" data-category="capsule" data-name="db boost">
+<h3>DB BOOST</h3>
+<p>Capsule • Diabetes Control</p>
+</div>
 
-<div class="product-card" data-category="powder" data-name="db pan powder">DB PAN POWDER</div>
+<div class="product-card" data-category="capsule" data-name="db life">
+<h3>DB LIFE</h3>
+<p>Capsule • Energy</p>
+</div>
 
-<div class="product-card" data-category="syrup" data-name="db pan 10">DB PAN 10</div>
-<div class="product-card" data-category="syrup" data-name="quick qr">QUICK QR</div>
+<div class="product-card" data-category="capsule" data-name="dabatas">
+<h3>DABATAS</h3>
+<p>Capsule • Pancreas</p>
+</div>
+
+<div class="product-card" data-category="powder" data-name="db pan powder">
+<h3>DB PAN POWDER</h3>
+<p>Powder</p>
+</div>
+
+<div class="product-card" data-category="syrup" data-name="db pan 10">
+<h3>DB PAN 10</h3>
+<p>Syrup</p>
+</div>
+
+<div class="product-card" data-category="syrup" data-name="quick qr">
+<h3>QUICK QR</h3>
+<p>Syrup</p>
+</div>
 
 </div>
 
+<!-- EMPTY -->
 <div class="empty-state" id="emptyState">
 <h3>Koi product nahi mila</h3>
 </div>
 
+<!-- BOTTOM -->
 <div class="bottom-bar">
-WhatsApp Karein
+WhatsApp Par Order Karein
 </div>
 
 <script>
@@ -54,8 +133,10 @@ let activeFilter="all";
 
 function filterProducts(type,btn){
 activeFilter=type;
+
 document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
 btn.classList.add("active");
+
 applyFilters();
 }
 
@@ -73,7 +154,7 @@ cards.forEach(card=>{
 const cat=card.dataset.category;
 const name=card.dataset.name;
 
-// 🔥 ONLY FIX HERE (baaki sab same)
+// ✅ FINAL FIX
 const matchFilter = (activeFilter==="all") || (cat===activeFilter);
 const matchSearch = name.includes(search);
 
