@@ -578,7 +578,7 @@ body{font-family:'Poppins',sans-serif;background:#f8fffe;color:var(--text);overf
     </div>
     <div class="selected-items-list" id="selectedItemsList" style="display:none"></div>
     <div class="total-row" id="totalRow" style="display:none">
-      <div><div class="total-label">Kul Rakam</div><div class="total-items-count" id="totalItemsCount"></div></div>
+      <div><div class="total-label">Total Amount</div><div class="total-items-count" id="totalItemsCount"></div></div>
       <div class="total-amount" id="totalAmount">₹0</div>
     </div>
     <div class="order-actions" id="orderActions" style="display:none">
@@ -744,7 +744,7 @@ function updateOrderSummary(){
   else if(totalPieces > 6) convFee = 200;
 
   html += '<div class="selected-item-row" style="background:#fff7ed;border-color:rgba(245,158,11,.25)">'
-    + '<span class="selected-item-name" style="color:#92400e">🚚 Convenience Fee</span>'
+    + '<span class="selected-item-name" style="color:#92400e">🚚 Convenience Fee(Pack+Speed post) </span>'
     + '<span class="selected-item-qty" style="font-size:11px;color:#b45309">(pieces: ' + totalPieces + ')</span>'
     + '<span class="selected-item-price" style="color:#d97706">₹' + convFee + '</span>'
     + '</div>';
