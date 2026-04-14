@@ -784,7 +784,7 @@ function openOrderModal(){
   if(totalPieces > 10) convFee = 280;
   else if(totalPieces > 6) convFee = 200;
   var grandTotal = total + convFee;
-  html += '<div class="mitem"><span>🚚 Convenience Fee</span><span>₹' + convFee + '</span></div>';
+  html += '<div class="mitem"><span>🚚 Convenience Fee (pack+speed post)</span><span>₹' + convFee + '</span></div>';
   html += '<div class="mtotal"><span>Total</span><span>₹' + grandTotal.toLocaleString('en-IN') + '</span></div>';
   document.getElementById('modalOrderSummary').innerHTML = html;
   document.getElementById('patientName').value = '';
