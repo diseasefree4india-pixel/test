@@ -731,11 +731,23 @@ function updateOrderSummary(){
     var item = selectedItems[pid];
     var itemTotal = item.price * item.qty;
     total += itemTotal; totalPieces += item.qty;
-    html += '<div class="selected-item-row"><span class="selected-item-name">' + item.name + '</span><span class="selected-item-qty">x ' + item.qty + '</span><span class="selected-item-price">₹' + itemTotal.toLocaleString('en-IN') + '</span></div>';
+    html += '<div class="selected-item-row"><span class="selected-item-name">' + item.name + '</span><span class="selected-item-qty">₹' + item.price.toLocaleString('en-IN') + ' x ' + item.qty + ' = </span><span class="selected-item-price">₹' + itemTotal.toLocaleString('en-IN') + '</span></div>';
   });
+  // Convenience fee based on total pieces
+  var convFee = 150;
+  if(totalPieces > 10) convFee = 280;
+  else if(totalPieces > 6) convFee = 200;
+
+  html += '<div class="selected-item-row" style="background:#fff7ed;border-color:rgba(245,158,11,.25)">'
+    + '<span class="selected-item-name" style="color:#92400e">🚚 Convenience Fee</span>'
+    + '<span class="selected-item-qty" style="font-size:11px;color:#b45309">(pieces: ' + totalPieces + ')</span>'
+    + '<span class="selected-item-price" style="color:#d97706">₹' + convFee + '</span>'
+    + '</div>';
+
+  var grandTotal = total + convFee;
   itemsList.innerHTML = html;
-  document.getElementById('totalAmount').textContent = '₹' + total.toLocaleString('en-IN');
-  document.getElementById('totalItemsCount').textContent = keys.length + ' product' + (keys.length > 1 ? 's' : '') + ', ' + totalPieces + ' piece' + (totalPieces > 1 ? 's' : '');
+  document.getElementById('totalAmount').textContent = '₹' + grandTotal.toLocaleString('en-IN');
+  document.getElementById('totalItemsCount').textContent = keys.length + ' product' + (keys.length > 1 ? 's' : '') + ', ' + totalPieces + ' piece' + (totalPieces > 1 ? 's' : '') + ' + ₹' + convFee + ' convenience fee';
 }
 function clearAllSelections(){
   document.querySelectorAll('.product-card').forEach(function(card){
@@ -755,14 +767,20 @@ function clearAllSelections(){
 function openOrderModal(){
   var keys = Object.keys(selectedItems);
   if(keys.length === 0) return;
-  var html = '', total = 0;
+  var html = '', total = 0, totalPieces = 0;
   keys.forEach(function(pid){
     var item = selectedItems[pid];
     var itemTotal = item.price * item.qty;
     total += itemTotal;
+    totalPieces += item.qty;
     html += '<div class="mitem"><span>' + item.name + ' x' + item.qty + '</span><span>₹' + itemTotal.toLocaleString('en-IN') + '</span></div>';
   });
-  html += '<div class="mtotal"><span>Total</span><span>₹' + total.toLocaleString('en-IN') + '</span></div>';
+  var convFee = 150;
+  if(totalPieces > 10) convFee = 280;
+  else if(totalPieces > 6) convFee = 200;
+  var grandTotal = total + convFee;
+  html += '<div class="mitem"><span>🚚 Convenience Fee</span><span>₹' + convFee + '</span></div>';
+  html += '<div class="mtotal"><span>Total</span><span>₹' + grandTotal.toLocaleString('en-IN') + '</span></div>';
   document.getElementById('modalOrderSummary').innerHTML = html;
   document.getElementById('patientName').value = '';
   document.getElementById('regNumber').value = '';
@@ -785,14 +803,20 @@ function sendWhatsApp(){
   var reg = document.getElementById('regNumber').value.trim();
   var keys = Object.keys(selectedItems);
   var lines = 'Namaskar Doctor,\nMujhe ye products chahiye:\n\n';
-  var total = 0;
+  var total = 0, totalPieces = 0;
   keys.forEach(function(pid){
     var item = selectedItems[pid];
     var itemTotal = item.price * item.qty;
     total += itemTotal;
+    totalPieces += item.qty;
     lines += '• ' + item.name + ' x ' + item.qty + ' = ₹' + itemTotal.toLocaleString('en-IN') + '\n';
   });
-  lines += '\n*Kul Total: ₹' + total.toLocaleString('en-IN') + '*';
+  var convFee = 150;
+  if(totalPieces > 10) convFee = 280;
+  else if(totalPieces > 6) convFee = 200;
+  var grandTotal = total + convFee;
+  lines += '\n🚚 Convenience Fee: ₹' + convFee;
+  lines += '\n*Kul Total: ₹' + grandTotal.toLocaleString('en-IN') + '*';
   lines += '\n\nNaam: ' + name + '\nReg. No.: ' + (reg || 'NA');
   window.open('https://wa.me/918434813523?text=' + encodeURIComponent(lines), '_blank');
   closeOrderModal();
